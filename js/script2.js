@@ -82,7 +82,7 @@ $(document).ready(function(){
         
     });
 
-    $("sum-checkout a").attr("disable",true);
+    $("#thank").attr("href",'');
 
     $("#apply").click(function(){
         let code = $("#code").val();
@@ -94,6 +94,7 @@ $(document).ready(function(){
             $(this).attr('id','');
             $("#code").attr('id','');
             $("sum-checkout a").attr("disable",false);
+            $("#thank").attr("href",'thank.html');
         }else{
             $(this).css({"background-color":"red"});
             $("#code").css({"background-color":"red"});
