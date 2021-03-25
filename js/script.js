@@ -172,4 +172,9 @@ $(document).ready(function(e){
       $("#lightbox").hide("slow");
   });
 
+  $(".thumbnail").click(function(){
+      let src = $(this).attr('src');
+      $("#product-img").css({"background-image": "url("+src+")","background-size": "100% 100%","background-repeat": "no-repeat","background-position": "0% 0%"});          
+  });
+
 });

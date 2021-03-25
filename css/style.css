@@ -120,6 +120,10 @@ nav div:last-child svg{
     color: rgb(214, 212, 212);
 }
 
+.thumbnail{
+    cursor: pointer;
+}
+
 #product{
     display: grid;
     grid-template-columns: .5fr 4fr 3fr;

@@ -32,10 +32,13 @@ $(document).ready(function(){
                 $("#v").val(1);
                 subtotal = (Number($(this).val())  * parseFloat(product.pprice)).toFixed(2) ;
                 $("#s").text("$"+subtotal).css("color","#262a39");
+                sum_total = subtotal;
 
                 $("#total").text("$"+subtotal).css("color","#262a39");
+                $("#sum-total").text("$"+sum_total);
             }
             subtotal = (Number($(this).val())  * parseFloat(product.pprice)).toFixed(2) ;
+            sum_total = subtotal;
             $("#s").text("$"+subtotal).css("color","#262a39");
 
            // total = total + subtotal;
@@ -69,6 +72,7 @@ $(document).ready(function(){
                 e.preventDefault();
                 subtotal = (Number($(this).val())  * parseFloat(product.pprice)).toFixed(2) ;
                 $("#s").text("$"+subtotal).css("color","#262a39");
+                $("#sum-total").text("$"+sum_total);
             });
     
     
@@ -80,11 +84,13 @@ $(document).ready(function(){
 
     $("#apply").click(function(){
         let code = $("#code").val();
-        if(code.length === 5){
+        if(code.length == 5){
             $(this).css({"background-color":"#364a53"});
             $("#code").css({"background-color":"white"});
             sum_total *= .5;
             $("#sum-total").text("$"+sum_total);
+            $(this).attr('id','');
+            $("#code").attr('id','');
         }else{
             $(this).css({"background-color":"red"});
             $("#code").css({"background-color":"red"});
