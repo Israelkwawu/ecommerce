@@ -82,6 +82,8 @@ $(document).ready(function(){
         
     });
 
+    $("sum-checkout a").attr("disable",true);
+
     $("#apply").click(function(){
         let code = $("#code").val();
         if(code.length == 5){
@@ -91,12 +93,13 @@ $(document).ready(function(){
             $("#sum-total").text("$"+sum_total);
             $(this).attr('id','');
             $("#code").attr('id','');
+            $("sum-checkout a").attr("disable",false);
         }else{
             $(this).css({"background-color":"red"});
             $("#code").css({"background-color":"red"});
         }
     });
 
-
+   
     
 });
